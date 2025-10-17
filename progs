@@ -30,6 +30,21 @@ void ves(int massa)
     cout << "вес: " << massa * 9.8 << "H";
 }
 
+void paravoziks_order(string operation, const vector <double> elements)
+{
+    if (operation == "сложение")
+    {
+        int summ;
+        for (int i = 0; i < size(elements); i++)
+        {
+            summ += elements[i];
+        }
+    }
+    else if (operation == "вычитание")
+    {
+        
+    }
+}
 
 
 int main()
