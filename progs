@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <random>
+
+using namespace std;
+
+void capusticia(string metall)
+{
+    random_device dev;
+    mt19937 rng(dev());
+    uniform_int_distribution<mt19937::result_type> chance(0, 1);
+    int res = chance(rng);
+    if (res == 1)
+    {
+        metall = "капуста";
+        cout << "Капустиция произошла! Результат: " << metall; 
+    }
+    else
+    {
+        cout << "Капустиция не произошла! Результат: " << metall;
+    }
+}
+
+int main()
+{
+    string s;
+    cin >> s;
+    capusticia(s);
+    return 0;
+}
